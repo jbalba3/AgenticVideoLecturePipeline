@@ -1,0 +1,63 @@
+{
+  "flow_summary": "This lecture addresses the challenge of generating long, coherent text documents with AI in a single pass. It proposes and demonstrates a hierarchical, agentic flow architecture, using screenplay generation as a primary example. We will explore specialized agents (Premise, Arc, Sequence, Scene), discuss methods for enhancing intermediate outputs, and illustrate the generalizability of this approach to various other document types, empowering attendees to implement or modify such systems.",
+  "acts": [
+    {
+      "name": "Introduction & The Challenge of Long-Form AI Generation",
+      "slide_range": "1-3",
+      "purpose": "Hook the audience, introduce the topic, and establish the core problem AI faces with long, coherent text generation.",
+      "beats": [
+        "Engage with a humorous take on AI in creative industries, specifically screenwriting, using the AWESOM-O robot.",
+        "Set the stage: AI's capability to generate long, coherent text documents like books and screenplays.",
+        "Introduce the core challenge: the difficulty of 'one-shot' long-form generation.",
+        "Explain 'context drift' and how AI can get 'lost in the middle' when trying to maintain global coherence."
+      ]
+    },
+    {
+      "name": "Screenplays: A Structured Approach with Agentic Flow",
+      "slide_range": "4-5",
+      "purpose": "Introduce screenplays as an ideal, structured example for hierarchical generation and present the overall agentic flow architecture.",
+      "beats": [
+        "Detail the inherent hierarchical structure of screenplays, from premise to scenes, making them a perfect case study for structured AI generation.",
+        "Introduce the concept of an agentic flow as a solution to the 'one-shot' problem.",
+        "Visually present the 'Screenplay Flow' diagram, showing the progression from Premise to Arc, Sequences, and Scenes."
+      ]
+    },
+    {
+      "name": "Building the Screenplay: Agent by Agent",
+      "slide_range": "6-15",
+      "purpose": "Explain the function, inputs, and outputs of each specialized agent in the hierarchical flow, demonstrating how they build upon each other.",
+      "beats": [
+        "**Premise Agent:** Describe its interactive role in defining the movie's core elements (title, logline, characters, conflict, genre, themes) and its output as premise.json.",
+        "**Arc Agent:** Explain how it takes premise.json to structure the story into multiple acts, allowing for detailed development of each act's summary and key beats, outputting arc.json.",
+        "**Sequence Agent:** Detail this automated agent's function in breaking down acts into sequences, using both global (premise.json, arc.json) and local context, defining sequence goals, locations, and exit beats, and generating sequence.json.",
+        "**Scene Agent:** Illustrate how this final automated agent generates individual scenes, including slug lines, actions, and dialogues, by leveraging all previous contextual outputs, resulting in scenes.json."
+      ]
+    },
+    {
+      "name": "Refinement, Adaptability, and Practical Application",
+      "slide_range": "16-18",
+      "purpose": "Show how the agentic flow can be improved and adapted to a wide range of other document types, concluding with a call to action for practical implementation.",
+      "beats": [
+        "Introduce the concept of 'Enhancement Agents' to refine and improve the quality and creativity of intermediate outputs at various stages of the flow.",
+        "Demonstrate the high generalizability of the agentic flow architecture by adapting it to generate diverse long text documents like books, podcasts, lectures, and business plans.",
+        "Outline practical coding session activities, encouraging attendees to write a screenplay, integrate enhancement agents, and modify the system for different document types."
+      ]
+    }
+  ],
+  "idea_progression": [
+    "AI can generate text, but long-form coherence is a significant challenge due to context drift.",
+    "Hierarchical structures, like those in screenplays, offer a blueprint for managing complexity.",
+    "An agentic flow, breaking down generation into specialized, sequential tasks, can overcome long-form challenges.",
+    "Each agent (Premise, Arc, Sequence, Scene) builds upon the previous, progressively detailing the document.",
+    "Intermediate outputs are crucial and can be enhanced by dedicated agents for quality and creativity.",
+    "This agentic architecture is highly adaptable and can be generalized to generate a wide array of long text documents.",
+    "Practical application involves implementing and customizing these agentic flows for specific generation tasks."
+  ],
+  "transitions": [
+    "Having seen the humorous side of AI in Hollywood, let's get serious about the technical hurdles. While AI is powerful, generating truly long, coherent documents in one go presents unique challenges.",
+    "So, how do we tackle this 'lost in the middle' problem? The answer lies in structure. And few things are as structured as a movie screenplay, which provides a perfect framework for our solution: a hierarchical agentic flow.",
+    "Now that we understand the overall blueprint, let's dive into the specifics. We'll walk through each specialized agent, seeing how they collaborate to build a screenplay from the ground up, piece by piece.",
+    "We've seen how our agents construct a screenplay step-by-step. But what if we want to make it even better, more creative, or adapt this powerful system for other uses? That's where enhancement and generalization come in.",
+    "With a solid understanding of the agentic flow, its enhancements, and its broad applicability, it's time to roll up our sleeves. Let's move to a coding session where we can bring these concepts to life."
+  ]
+}

@@ -1,35 +1,33 @@
 {
-  "tone": "Conversational, high-energy, and approachable—more Twitch streamer than formal lecture—while still teaching dense technical material clearly.",
-  "pacing": "Bursty and reactive: quick asides and chat callouts, then slower, deliberate explanations when introducing definitions (e.g., RAG, embeddings). Uses rhetorical questions as pauses.",
-  "register": "Mostly informal American English with occasional academic vocabulary; mixes 'professor voice' with internet-native phrasing ('like', 'yo', 'bro') without becoming unprofessional.",
+  "tone": "Energetic, engaging, practical, and confident, with a friendly and slightly informal demeanor. The instructor conveys enthusiasm for the subject matter and a willingness to share personal experiences, including frustrations.",
+  "pacing": "Generally steady and conversational, but with frequent bursts of excitement and quickening pace when demonstrating code, making a strong point, or expressing surprise ('Boom!', 'Go!', 'Whoa, that was awesome.'). Pauses are used for emphasis, thought, or to check in with the audience.",
+  "register": "A dynamic mix of technical jargon (e.g., 'RAG', 'embeddings', 'cosine similarity', 'MongoDB URI', 'npm install') and highly informal, colloquial language (e.g., 'yo', 'bro', 'what the hell', 'sucks', 'damn', 'fuck me', 'chill out', 'let it rip', 'gonna yap about').",
   "fillers_and_discourse_markers": [
     "like",
     "um",
-    "uh",
     "okay",
+    "you know",
     "right?",
-    "you know?",
-    "so…",
     "yeah",
-    "anyways"
+    "so",
+    "alright",
+    "uh",
+    "I mean"
   ],
-  "audience_address": "Direct second-person ('y'all', 'you people') and explicit chat engagement; acknowledges student stress and norms (deadlines, grades) with humor and reassurance.",
-  "humor_and_asides": "Self-aware jokes, mild irreverence, and pop-culture or social-media references used as intuition pumps; occasional comic exaggeration to make a point stick.",
+  "audience_address": "Direct and inclusive, frequently using 'you people', 'y'all', and 'folks'. The instructor actively encourages participation through direct questions ('Let me know in the chat', 'What do you feel like today?'), and invites students to type in the chat, fostering an interactive, stream-like environment.",
+  "humor_and_asides": "Frequent and often self-deprecating or playful. Examples include comments on personal coding habits ('This is me being a bad coder'), lighthearted exclamations ('My god, man. Okay, anyway, that is the Harry Potter PDF'), and sharing personal anecdotes or frustrations ('I have now leaked my key to the world, it's on Zoom recorded, so please don't steal my key.', 'I learned last night the hard way, that Gemini API has a lot of rate limits.').",
   "explanation_moves": [
-    "Motivate with a big 'wouldn't it be cool if…' scenario before defining the technique",
-    "Contrast naive approaches with practical constraints (cost, latency, context window limits)",
-    "Use concrete analogies (maps/coordinates, clustering plots) and repeated refrains ('selective pages', 'top-k')",
-    "Show how tools like Cursor compress what used to be a data-science workflow",
-    "Translate jargon into plain language, then name the jargon explicitly"
+    "Intuitive analogies (e.g., 'numbers are, like, the coordinates on a map' for embeddings, 'network or a graph' for HNSW, 'right triangle' for cosine similarity).",
+    "Practical warnings and advice (e.g., 'Invest in banking might not be a thing in a couple years. So if that was your career path, you may want to reconsider it.', 'dude, it's Yale SOM, grades don't matter', 'don't waste your money for, like, 3,000 dimensions').",
+    "Step-by-step breakdowns of complex processes (e.g., 'Let's just kind of go through it one more time, step by step' for the RAG workflow).",
+    "Clarifying technical terms by relating them to common understanding (e.g., 'I don't understand tokens, but I get text')."
   ],
-  "rhetorical_questions": "Frequent, often stacked, to check understanding and keep attention ('Wouldn't that be cool?', 'Can you fit…?').",
-  "signposting": "Explicit section shifts ('Okay, so…', 'Alright, let's get started', 'Now…') and frequent recaps of the goal of the lecture segment.",
-  "emphasis_patterns": "Repetition for emphasis; 'okay?' as a tag question; contrasts ('even if you could, it's still a bad idea'); warnings framed as friendly heads-ups.",
+  "rhetorical_questions": "Frequently used to engage the audience, prompt thought, or express a point. Examples include: 'Now, is that a true story, or is that fake Twitter propaganda? I don't know...', 'Wouldn't that be cool?', 'Am I right?', 'Do I gotta re-embed all that stuff again?', 'Who the hell reads this stuff?'",
+  "signposting": "Clear and consistent, using phrases like 'Okay, so...', 'And then I think today...', 'Alright, um, let's see.', 'Any other questions before we begin the lecture today?', 'Alright, let's get the party started.', 'Okay, so to do that, we're gonna use this thing called...', and 'Alright, so now let's talk about the details...' to transition between topics, steps, and sections of the lecture.",
+  "emphasis_patterns": "Achieved through repetition ('11 a.m., getting in on time, okay?'), direct and declarative statements ('grades don't matter', 'I really care about the project.'), confirmation tags ('right?', 'yeah?'), and exclamatory remarks ('Awesome!', 'Beautiful!', 'Hell no.', 'Whoa, that was awesome.').",
   "taboo_or_avoid": [
-    "Do not fabricate specific personal claims not grounded in the slide deck",
-    "Avoid slurs; avoid excessive profanity (light colloquialism is okay if consistent with style profile)",
-    "Avoid reading bullets verbatim without framing"
+    "The instructor uses mild expletives ('fuck me', 'what the hell', 'damn', 'sucks') for emphasis or to express frustration. Stronger profanity might be avoided, but mild expletives are present in the natural speech."
   ],
-  "imitation_notes": "Write narration as spoken lecture, not essay prose. Use short sentences, occasional fragments, and natural connective tissue. Sprinkle a few discourse markers ('like', 'okay', 'right?') sparingly—enough to match the vibe without overdoing it. When introducing a new concept, start from a relatable scenario, then tighten into definitions. Keep enthusiasm audible through word choice (awesome, cool, wild) but keep facts tied to the slides.",
+  "imitation_notes": "Mimic an energetic, conversational, and slightly informal delivery. Use frequent fillers ('like', 'um', 'okay') and discourse markers ('so', 'alright') naturally. Address the audience directly using 'y'all', 'folks', and 'you people'. Incorporate rhetorical questions to engage. Vary pacing: generally steady but with bursts of excitement and quickening for emphasis or demonstrations, slowing down for warnings or important advice. Use exclamations and direct statements for emphasis. Integrate humor, self-deprecating remarks, and personal asides. Clearly signpost transitions. When explaining technical concepts, provide intuitive analogies. Mild expletives are acceptable if they fit the context of frustration or excitement, but avoid overuse or stronger profanity.",
   "source_transcript_url": "https://zlisto.github.io/genAI_social_media/slides_pdf/MGT%20575%2001-02%20(SP26)_%20%20Generative%20AI%20and%20Social%20Media%20Lecture%2011%20Section%202_Captions_English%20(United%20States).txt"
 }

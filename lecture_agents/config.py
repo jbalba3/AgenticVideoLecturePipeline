@@ -53,7 +53,8 @@ def elevenlabs_voice_id() -> str | None:
 
 
 def gemini_model_agents() -> str:
-    return os.environ.get("GEMINI_MODEL_AGENTS", "gemini-2.0-flash").strip()
+    # gemini-2.0-flash is not available to new API projects; use 2.5+ for agents/vision.
+    return os.environ.get("GEMINI_MODEL_AGENTS", "gemini-2.5-flash").strip()
 
 
 def gemini_model_tts() -> str:

@@ -1,0 +1,22 @@
+{
+  "thesis": "Generating long, coherent text documents with AI is challenging in a single pass, but can be effectively achieved through a hierarchical, agentic flow, which will be demonstrated by building a system for screenplay generation.",
+  "scope": "This lecture will explore the difficulties of 'one-shot' long-form AI text generation, introduce a hierarchical agentic flow architecture for overcoming these challenges, detail the specific agents (Premise, Arc, Sequence, Scene) involved in generating screenplays, discuss methods for enhancing intermediate outputs, and illustrate the generalizability of this agentic approach to various other document types.",
+  "learning_objectives": [
+    "Identify the core challenges associated with generating long, coherent text documents using AI.",
+    "Understand the hierarchical structure of screenplays and how it informs an agentic generation process.",
+    "Describe the architecture and function of an agentic flow for generating long-form documents, using screenplays as a primary example.",
+    "Explain the roles, inputs, and outputs of specialized agents (Premise, Arc, Sequence, Scene) within the hierarchical flow.",
+    "Propose and integrate enhancement agents to improve the quality and creativity of intermediate outputs.",
+    "Adapt the agentic flow architecture to generate different types of long text documents beyond screenplays.",
+    "Implement or modify an AI agentic flow for practical text generation tasks."
+  ],
+  "audience": "AI/ML practitioners, developers, and students interested in natural language generation, agentic systems, and practical applications of AI for creative writing or document automation.",
+  "key_takeaways": [
+    "AI struggles with 'one-shot' generation of long, coherent documents due to context drift and maintaining global coherence.",
+    "A hierarchical, agentic flow, breaking down the generation process into smaller, manageable steps, is an effective solution for long-form text.",
+    "Screenplays provide a structured and practical example for demonstrating this agentic generation methodology.",
+    "Specialized agents (Premise, Arc, Sequence, Scene) work collaboratively, building upon each other's outputs to create a complete document.",
+    "Enhancement agents can be integrated at various stages to refine and improve the quality and creativity of intermediate outputs.",
+    "The agentic flow architecture is highly generalizable and can be adapted to generate a wide array of long text documents, from books and podcasts to lectures and business plans."
+  ]
+}
