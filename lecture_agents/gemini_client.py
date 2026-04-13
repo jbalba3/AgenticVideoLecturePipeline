@@ -33,10 +33,10 @@ def _gemini_resource_hint(exc: BaseException) -> str:
     if "429" in msg or "resource_exhausted" in msg or "credits" in msg or "billing" in msg:
         return (
             "\n\nGemini returned quota/billing error (429). Options:\n"
-            "  • Add credits / billing: https://aistudio.google.com/\n"
-            "  • Or use OpenAI for agent steps only: set LLM_PROVIDER=openai and OPENAI_API_KEY in .env\n"
-            "  • For TTS without Gemini: set TTS_PROVIDER=edge (or elevenlabs)\n"
-            "  • To skip regenerating style: use --skip-style if style.json is already good\n"
+            "  - Add credits / billing: https://aistudio.google.com/\n"
+            "  - Or use OpenAI for agent steps only: set LLM_PROVIDER=openai and OPENAI_API_KEY in .env\n"
+            "  - For TTS without Gemini: set TTS_PROVIDER=edge (or elevenlabs)\n"
+            "  - To skip regenerating style: use --skip-style if style.json is already good\n"
         )
     return ""
 

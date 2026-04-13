@@ -28,7 +28,7 @@ def main() -> None:
     load_dotenv(REPO_ROOT / ".env")
 
     parser = argparse.ArgumentParser(
-        description="Agentic pipeline: PDF → slide PNGs → JSON agents → TTS → one lecture .mp4"
+        description="Agentic pipeline: PDF -> slide PNGs -> JSON agents -> TTS -> one lecture .mp4"
     )
     parser.add_argument(
         "--pdf",
@@ -93,7 +93,7 @@ def main() -> None:
     print(f"[info] Project directory: {proj}")
 
     slide_paths = rasterize_pdf_to_pngs(pdf_path, slide_dir)
-    print(f"[ok] Rasterized {len(slide_paths)} slides → {slide_dir}")
+    print(f"[ok] Rasterized {len(slide_paths)} slides -> {slide_dir}")
 
     slide_json = proj / "slide_description.json"
     premise_json = proj / "premise.json"
@@ -135,7 +135,7 @@ def main() -> None:
     print(f"[ok] Wrote {narr_json}")
 
     run_tts_for_slides(narration_json=narr_json, audio_dir=audio_dir)
-    print(f"[ok] Wrote per-slide MP3s → {audio_dir}")
+    print(f"[ok] Wrote per-slide MP3s -> {audio_dir}")
 
     out_mp4 = pdf_path.parent / f"{pdf_path.stem}.mp4"
     final = assemble_lecture_video(

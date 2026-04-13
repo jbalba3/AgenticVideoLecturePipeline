@@ -34,6 +34,8 @@ TTS_PROVIDER=edge
 
 Then run `pip install -r requirements.txt` (includes `openai`).
 
+If OpenAI returns **401 / invalid API key**, create a fresh key at [platform.openai.com/api-keys](https://platform.openai.com/api-keys) and set **`OPENAI_API_KEY`** in `.env`. That name takes priority over `REACT_APP_OPENAI_API_KEY` if both are present (so you can override an old invalid key).
+
 This project also loads `REACT_APP_GEMINI_API_KEY` / `REACT_APP_OPENAI_API_KEY` if you use those names.
 
 ## Run the full pipeline
