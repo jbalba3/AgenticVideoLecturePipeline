@@ -92,4 +92,13 @@ def assemble_lecture_video(
 
     final = out_mp4 or (slide_images_dir.parent / f"{pdf_path.stem}.mp4")
     concat_segments(segment_files, final)
+    for p in segment_files:
+        try:
+            p.unlink(missing_ok=True)
+        except OSError:
+            pass
+    try:
+        segments_dir.rmdir()
+    except OSError:
+        pass
     return final
