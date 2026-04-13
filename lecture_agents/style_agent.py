@@ -3,7 +3,14 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from .config import STYLE_JSON_PATH, STYLE_TRANSCRIPT_URL, gemini_model_agents, google_api_key
+from .config import (
+    STYLE_JSON_PATH,
+    STYLE_TRANSCRIPT_URL,
+    gemini_model_agents,
+    google_api_key,
+    llm_provider,
+    openai_api_key,
+)
 from .gemini_client import generate_json_from_prompt
 from .transcript_fetch import fetch_style_transcript, load_transcript_from_path, strip_transcript_boilerplate
 
@@ -14,8 +21,11 @@ not supported by the text (you may infer tone/patterns)."""
 
 
 def build_style_profile(*, transcript_text: str) -> dict:
-    if not google_api_key():
-        raise RuntimeError("GOOGLE_API_KEY (or GEMINI_API_KEY) is required for the style agent.")
+    if llm_provider() == "openai":
+        if not openai_api_key():
+            raise RuntimeError("OPENAI_API_KEY is required when LLM_PROVIDER=openai.")
+    elif not google_api_key():
+        raise RuntimeError("GOOGLE_API_KEY (or GEMINI_API_KEY) is required when LLM_PROVIDER=gemini.")
 
     user = f"""Transcript (may include minor header lines):\n\n{transcript_text}\n\n
 Return JSON with these keys (add subfields if helpful):

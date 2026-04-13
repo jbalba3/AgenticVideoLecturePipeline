@@ -58,3 +58,20 @@ def gemini_model_agents() -> str:
 
 def gemini_model_tts() -> str:
     return os.environ.get("GEMINI_MODEL_TTS", "gemini-2.5-flash-preview-tts").strip()
+
+
+def llm_provider() -> str:
+    """Agent LLM: gemini (default) or openai."""
+    return (os.environ.get("LLM_PROVIDER") or "gemini").strip().lower()
+
+
+def openai_api_key() -> str | None:
+    for key in ("OPENAI_API_KEY", "REACT_APP_OPENAI_API_KEY"):
+        v = os.environ.get(key)
+        if v and v.strip():
+            return v.strip()
+    return None
+
+
+def openai_model_agents() -> str:
+    return os.environ.get("OPENAI_MODEL_AGENTS", "gpt-4o-mini").strip()

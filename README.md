@@ -6,7 +6,7 @@ This repository implements a local, multi-stage pipeline that turns a PDF slide 
 
 - **Python 3.10+**
 - **`ffmpeg` on your PATH** (used for MP3 encoding/merging and final MP4 mux/concat)
-- **A Google Gemini API key** with access to vision-capable models (used for all “agent” steps and default TTS)
+- **An API key for the agent LLM**: default is **Google Gemini** (vision + JSON). If Gemini returns **429 / billing / depleted credits**, set **`LLM_PROVIDER=openai`** and **`OPENAI_API_KEY`** to run the same agents on OpenAI (see below).
 - **`Lecture_17_AI_screenplays.pdf` in the repository root** (the grader expects it here; do not commit generated media)
 
 ## Setup
@@ -17,11 +17,24 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-Create a `.env` file in the repo root (see `.env.example`). At minimum:
+Create a `.env` file in the repo root (see `.env.example`). Typical setups:
 
-- `GOOGLE_API_KEY=...` (or `GEMINI_API_KEY=...`)
+**A) Gemini for agents (default)**  
+- `GOOGLE_API_KEY=...` (or `GEMINI_API_KEY=...`, or `REACT_APP_GEMINI_API_KEY`)
 
-This project also loads `REACT_APP_GEMINI_API_KEY` if present (useful if you already store your key that way).
+**B) Gemini quota exhausted (429 “prepayment credits depleted”)**  
+Use OpenAI for the text/vision **agent** steps and Edge (or ElevenLabs) for **TTS** so you do not need a working Gemini quota:
+
+```env
+LLM_PROVIDER=openai
+OPENAI_API_KEY=sk-...
+OPENAI_MODEL_AGENTS=gpt-4o-mini
+TTS_PROVIDER=edge
+```
+
+Then run `pip install -r requirements.txt` (includes `openai`).
+
+This project also loads `REACT_APP_GEMINI_API_KEY` / `REACT_APP_OPENAI_API_KEY` if you use those names.
 
 ## Run the full pipeline
 
