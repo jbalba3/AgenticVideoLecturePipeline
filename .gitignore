@@ -1,0 +1,19 @@
+.env
+.env.*
+!.env.example
+
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# Generated media (do not commit binaries)
+projects/**/slide_images/**
+!projects/**/slide_images/.gitkeep
+projects/**/audio/**
+!projects/**/audio/.gitkeep
+projects/**/_segments/
+*.mp4
