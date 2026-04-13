@@ -55,6 +55,22 @@ Default is Gemini native TTS (`TTS_PROVIDER=gemini`).
 - **Edge TTS (offline-friendly)**: set `TTS_PROVIDER=edge`.
 - If Gemini TTS fails at runtime, the pipeline **falls back to Edge TTS** so you can still get an end-to-end `.mp4` while debugging keys/models.
 
+## GitHub submission (Canvas)
+
+**Submit this URL on Canvas:**
+
+[https://github.com/jbalba3/AgenticVideoLecturePipeline](https://github.com/jbalba3/AgenticVideoLecturePipeline)
+
+If you still need to connect your local folder to GitHub:
+
+```bash
+git remote add origin https://github.com/jbalba3/AgenticVideoLecturePipeline.git
+git branch -M main
+git push -u origin main
+```
+
+(If `origin` already exists, use `git remote set-url origin https://github.com/jbalba3/AgenticVideoLecturePipeline.git` instead.)
+
 ## Submission hygiene (Canvas)
 
 Do **not** commit generated binaries:
@@ -62,4 +78,4 @@ Do **not** commit generated binaries:
 - slide PNGs, MP3s, MP4s (they are ignored via `.gitignore`)
 - your `.env` / API keys
 
-Commit **code**, **`requirements.txt`**, **`README.md`**, **`style.json`**, and the **project JSON artifacts** you want the grader to inspect under `projects/…/`.
+Commit **code**, **`Lecture_17_AI_screenplays.pdf`** (required for grading), **`requirements.txt`**, **`README.md`**, **`style.json`**, and the **project JSON artifacts** you want the grader to inspect under `projects/…/`.
